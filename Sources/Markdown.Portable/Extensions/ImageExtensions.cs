@@ -5,7 +5,6 @@
     using System.IO;
     using System.Net;
     using SkiaSharp;
-    using Xamarin.Forms;
 
     public static class ImageExtensions
     {

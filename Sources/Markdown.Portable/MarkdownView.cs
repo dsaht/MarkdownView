@@ -11,8 +11,6 @@
     using Markdig;
     using Markdig.Syntax;
     using Markdig.Syntax.Inlines;
-    using Xamarin.Essentials;
-    using Xamarin.Forms;
 
     public class MarkdownView : ContentView
     {
@@ -488,7 +486,7 @@
                         {
                             Text = literal.Content.Text.Substring(literal.Content.Start, literal.Content.Length),
                             FontAttributes = attributes,
-                            ForegroundColor = foregroundColor,
+                            TextColor = foregroundColor,
                             BackgroundColor = backgroundColor,
                             FontSize = size,
                             FontFamily = family,
@@ -553,7 +551,7 @@
                             Text="\u2002",
                             FontSize = size,
                             FontFamily = Theme.Code.FontFamily,
-                            ForegroundColor = Theme.Code.ForegroundColor,
+                            TextColor = Theme.Code.ForegroundColor,
                             BackgroundColor = Theme.Code.BackgroundColor
                         },
                         new Span
@@ -563,7 +561,7 @@
                             TextDecorations = Theme.Code.TextDecorations,
                             FontSize = size,
                             FontFamily = Theme.Code.FontFamily,
-                            ForegroundColor = Theme.Code.ForegroundColor,
+                            TextColor = Theme.Code.ForegroundColor,
                             BackgroundColor = Theme.Code.BackgroundColor
                         },
                         new Span()
@@ -571,7 +569,7 @@
                             Text="\u2002",
                             FontSize = size,
                             FontFamily = Theme.Code.FontFamily,
-                            ForegroundColor = Theme.Code.ForegroundColor,
+                            TextColor = Theme.Code.ForegroundColor,
                             BackgroundColor = Theme.Code.BackgroundColor
                         },
                     };
@@ -607,7 +605,7 @@
                     Text = autolink.Url,
                     FontAttributes = styles.Attributes,
                     TextDecorations = styles.TextDecorations,
-                    ForegroundColor = styles.ForegroundColor,
+                    TextColor = styles.ForegroundColor,
                     BackgroundColor = styles.BackgroundColor,
                     FontSize = fontSize,
                     FontFamily = Theme.Link.FontFamily ?? fontFamily,

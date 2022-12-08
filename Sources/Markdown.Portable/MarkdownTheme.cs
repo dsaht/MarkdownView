@@ -1,8 +1,6 @@
 ﻿
 namespace Xam.Forms.Markdown
 {
-    using Xamarin.Forms;
-
     public class MarkdownTheme
     {
         public MarkdownTheme()
@@ -68,7 +66,7 @@ namespace Xam.Forms.Markdown
                 Attributes = FontAttributes.None,
                 BorderSize = 4,
                 FontSize = 12,
-                BackgroundColor = Color.Gray.MultiplyAlpha(.1),
+                BackgroundColor = Colors.Gray.MultiplyAlpha(.1f),
             };
 
             Separator = new MarkdownStyle

@@ -1,6 +1,5 @@
 ﻿using System;
 using Markdig.Syntax;
-using Xamarin.Forms;
 
 namespace Xam.Forms.Markdown
 {
