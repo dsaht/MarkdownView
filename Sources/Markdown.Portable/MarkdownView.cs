@@ -22,7 +22,7 @@
 
         public static MarkdownTheme Global = new LightMarkdownTheme();
 
-        static readonly WebClient webClient = new WebClient();
+        static readonly WebClient webClient = new ();
 
         public string Markdown
         {
