@@ -14,7 +14,17 @@
 
     public class MarkdownView : ContentView
     {
-        public Action<string> NavigateToLink { get; set; } = async (s) => await Browser.OpenAsync(s);
+        public Action<string> NavigateToLink { get; set; } = async (s) =>
+        {
+            var options = new BrowserLaunchOptions()
+            {
+                LaunchMode = BrowserLaunchMode.External,
+                TitleMode = BrowserTitleMode.Show,
+                PreferredToolbarColor = Colors.Violet,
+                PreferredControlColor = Colors.SandyBrown
+            };
+            await Browser.Default.OpenAsync(s, options);
+        };
 
         const string youTubeWatchPattern = @"https?:\/\/www\.youtube\.com\/watch\?v=([^&]+)&?";
         const string youTubePattern = @"https?:\/\/youtu\.be/([^&]+)&?";
