@@ -32,7 +32,7 @@
 
         public static MarkdownTheme Global = new LightMarkdownTheme();
 
-        static readonly WebClient webClient = new ();
+        static readonly HttpClient webClient = new ();
 
         public string Markdown
         {
@@ -711,7 +711,7 @@
 
             try
             {
-                var byteArray = webClient.DownloadData(url);
+                var byteArray = webClient.GetByteArrayAsync(url).Result;
 
                 if (byteArray == null || !byteArray.Any())
                 {
